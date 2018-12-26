@@ -13,6 +13,7 @@ class Word2Vec():
         if word not in self.model.vocab_hash:
             w_vec = np.random.uniform(-0.1,0.1,size=128)
             self.model.vocab_hash[word] = len(self.model.vocab)
+            #词向量 行追加的形式添加在 末尾
             self.model.vectors = np.row_stack((self.model.vectors,w_vec))
             self.model.vocab = np.concatenate((self.model.vocab,np.array([word])))
 
@@ -24,7 +25,7 @@ class Word2Vec():
     def get(self, word):
         if word not in self.model.vocab_hash:
             word = 'unknown'
-
+        # 返回词嵌入的表示
         return self.model[word]
 
 

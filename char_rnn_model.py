@@ -9,6 +9,7 @@ from rhyme_helper import RhymeWords
 logging.getLogger('tensorflow').setLevel(logging.WARNING)
 SampleType = Enum('SampleType',('max_prob', 'weighted_sample', 'rhyme','select_given'))
 
+#字符集的RNN网络结构
 class CharRNNLM(object):
     def __init__(self, is_training, batch_size, num_unrollings, vocab_size,w2v_model,
                  hidden_size, max_grad_norm, embedding_size, num_layers,

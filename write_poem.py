@@ -41,8 +41,11 @@ class  WritePoem():
 
         #w2v_file = os.path.join(base_path, "vectors_poem.bin")
         w2v_file=r'G:\Postgraduate\myClassesOfGraduateStudentOne\张华平大数据人工智能课程\大作业\字符级LSTM文本自动生成模型\TangPoemGenerator\poet\data\poem\vectors_poem.bin'
+
+        #将词嵌入加载进来
         self.w2v = Word2Vec(w2v_file)
 
+        #读取押韵词
         RhymeWords.read_rhyme_words(r'G:\Postgraduate\myClassesOfGraduateStudentOne\张华平大数据人工智能课程\大作业\字符级LSTM文本自动生成模型\TangPoemGenerator\poet\data\poem\rhyme_words.txt')
 
         if args.seed >= 0:

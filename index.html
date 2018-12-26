@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>基于神经网络的自动写唐诗程序</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body background="file:///C|/Users/未来人类/Desktop/f.jpg">
+<h1>请选择你想要生成的诗歌类型</h1>
+
+<div id="introduction">
+
+<table width="80%" border="3" cellspacing="0" cellpadding="0">
+  <!-- TemplateBeginRepeat name="RepeatRegion1" -->
+    <tr>
+      <td><!-- TemplateBeginEditable name="EditRegion1" -->诗歌类别<!-- TemplateEndEditable --></td>
+      <td><!-- TemplateBeginEditable name="EditRegion2" -->style编号<!-- TemplateEndEditable --></td>
+    </tr>
+    <!-- TemplateEndRepeat -->
+  <tr>
+    <td>自由诗</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>带押韵的自由诗</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>藏头诗</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>给定若干字，以最大概率生成诗</td>
+    <td>4</td>
+  </tr>
+</table>
+</div>
+<hr>
+<br>
+<div id="example">
+	<h2> 写诗操作指南示例：</h2>
+    <h3> 操作方法： 更改浏览器上的url路径，更改关键字的属性，来展示自动写的诗歌类型</h3>
+    <li><span style="font-size:22px">自由诗
+        <br>
+    	<br> url示例：<b style="font-style:italic"> 127.0.0.1:5000/poem?style=1 </b></span>
+    </li>
+    <br>
+    <br>
+    <li><span style="font-size:22px">押韵诗
+        <br>
+    	<br> url示例：<b style="font-style:italic"> 127.0.0.1:5000/poem?style=2 </b></span>
+    </li>
+    <br><br>
+    <li><span style="font-size:22px">藏头诗（带押韵）
+        <br>
+    	<br> url示例：<b style="font-style:italic"> 127.0.0.1:5000/poem?style=3&start=花开放</b>
+        <br> <b>说明：start属性的值为在藏头诗中的每一句的字</b></span>
+    </li>
+    <br><br>
+    <li><span style="font-size:22px">藏字诗（带押韵）
+        <br>
+    	<br> url示例： <b style="font-style:italic">127.0.0.1:5000/poem?style=4&start=美如画</b>
+        <br> <b>说明：start属性的值为在藏字诗中要最大化概率生成诗歌的字</b></span>
+    </li>
+</div>
+</body>
+</html>
